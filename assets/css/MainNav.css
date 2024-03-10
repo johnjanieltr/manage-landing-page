@@ -20,7 +20,7 @@
   display: block;
   width: auto;
   margin: 0;
-  background-color: var(--main-bg-color);
+  background-color: inherit;
   opacity: 1;
 }
 

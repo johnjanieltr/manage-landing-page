@@ -38,6 +38,7 @@ img {
   -o-object-position: center center;
   object-position: center center;
   pointer-events: none;
+  user-select: none;
 }
 
 a {
@@ -108,6 +109,7 @@ body {
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ******* HEADER ******* */
@@ -128,7 +130,7 @@ body {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--main-bg-color);
+  background-color: inherit;
 }
 
 .header__icon-contain {
@@ -388,7 +390,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 910;
-  height: 110vh;
+  height: 120vh;
   margin: auto;
   background: rgb(255, 255, 255);
   background: linear-gradient(

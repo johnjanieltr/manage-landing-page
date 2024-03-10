@@ -5,3 +5,5 @@
 .DS_Store
 .style-guide.md
 design/
+node_modules
+dist

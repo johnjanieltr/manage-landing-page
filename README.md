@@ -10,7 +10,6 @@ This is my solution to the [Manage landing page challenge on Frontend Mentor](ht
 - [Process](#process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
-- [Author](#author)
 
 ## Overview
 
@@ -43,8 +42,3 @@ Users should be able to:
 ### Useful resources
 
 - [Utopia](https://utopia.fyi/) - Use the utopia page for responsive texts and responsive images
-
-## Author
-
-- Website - [John Janiel Troya](https://johnjanieltr.github.io/)
-- Frontend Mentor - [@johnjanieltr](https://www.frontendmentor.io/profile/johnjanieltr)
