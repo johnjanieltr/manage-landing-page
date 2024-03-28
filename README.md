@@ -2,6 +2,8 @@
 
 This is my solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5)
 
+![Design preview for the Manage landing page coding challenge](./assets/images/preview.jpg)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -26,18 +28,18 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/johnjanieltr/manage-landing-page](https://github.com/johnjanieltr/manage-landing-page/tree/main)
+- Live Site URL: [https://johnjanieltr.github.io/manage-landing-page](https://johnjanieltr.github.io/manage-landing-page)
 
 ## Process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS3
 - Mobile-first workflow
+- BEM methodology
+- Vanilla JavaScript
 
 ### Useful resources
 
