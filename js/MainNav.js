@@ -36,16 +36,22 @@ export const toggleMainNavMobile = () => {
     $darkenedScreen = document.getElementById("darkened-screen");
 
   if (!$mainNav.classList.contains("main-nav--is-active")) {
+    // open main nav mobile
     $mainNav.classList.remove("hidden");
     $darkenedScreen.classList.remove("hidden");
 
     setTimeout(() => {
       $mainNav.classList.add("main-nav--is-active");
       $darkenedScreen.classList.add("darkened-screen--is-active");
+      document.getElementById("burger-btn-icon").src =
+        "./assets/icons/icon-close.svg";
     }, 0);
   } else {
+    // close main nav mobile
     $mainNav.classList.remove("main-nav--is-active");
     $darkenedScreen.classList.remove("darkened-screen--is-active");
+    document.getElementById("burger-btn-icon").src =
+      "./assets/icons/icon-hamburger.svg";
 
     setTimeout(() => {
       $mainNav.classList.add("hidden");
