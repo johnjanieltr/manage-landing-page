@@ -37,6 +37,7 @@
   font-weight: 700;
   color: var(--primary-title-color);
   cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .main-nav__item:hover {

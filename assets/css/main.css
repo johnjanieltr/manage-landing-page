@@ -3,7 +3,8 @@
   --main-font-family: "Be Vietnam Pro", sans-serif;
   --primary-title-color: #242d52;
   --primary-text-color: #9095a7;
-  --bright-red: rgb(242, 95, 58);
+  --bright-red: #f25f3a;
+  --bright-red-hover-state: #f9916f;
   --max-width: 1200px;
   --dark-blue: #242d52;
   --dark-grayish-blue: #9095a7;
@@ -282,14 +283,19 @@ body {
   font-size: var(--step--2);
 }
 
-.footer__form-submit {
+.footer__form-submit-btn {
   margin-left: 1em;
-  padding: 0.76rem 2rem;
+  padding: 0.95rem 2rem 0.65rem;
   font-size: var(--step--2);
-  font-weight: 500;
+  font-weight: 700;
   background-color: var(--bright-red);
   border-radius: 1.7rem;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer__form-submit-btn:hover {
+  background-color: var(--bright-red-hover-state);
 }
 
 .footer__nav {
@@ -315,18 +321,34 @@ body {
   text-transform: capitalize;
 }
 
+.footer__nav-li a {
+  transition: color 0.2s ease;
+}
+
+.footer__nav-li a:hover {
+  color: var(--bright-red);
+}
+
 .footer__social-icons {
   width: 78%;
   max-width: 420px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   gap: 0.3rem;
   margin: 0 auto 2.5rem;
 }
 
-.footer__social-icons img {
-  width: 2.8rem;
+.footer__social-icons svg {
+  width: 2.6rem;
+  height: auto;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.footer__social-icons svg:hover {
+  color: var(--bright-red);
 }
 
 .footer__logo {
@@ -362,6 +384,7 @@ body {
   background-color: var(--bright-red);
   border-radius: 1.7rem;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn-header-contain {
@@ -376,10 +399,17 @@ body {
   font-weight: 700;
   color: var(--bright-red);
   background-color: #fff;
+  transition: color 0.2s ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  background-color: var(--bright-red-hover-state);
+}
+
+.btn--white:hover {
+  color: var(--bright-red-hover-state);
+  background-color: #fff;
+  opacity: 1;
 }
 
 /* ******* OTHERS ******* */
@@ -406,7 +436,7 @@ body {
   opacity: 1;
 }
 
-/* atribution */
+/* attribution */
 .attribution {
   margin-top: 1rem;
   margin-bottom: 1rem;
