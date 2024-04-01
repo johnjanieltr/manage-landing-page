@@ -11,6 +11,7 @@
   --very-dark-blue: #1d1e25;
   --very-pale-red: #ffefeb;
   --vary-light-gray: #fafafa;
+  --error-color: #e13535;
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -261,7 +262,8 @@ body {
 }
 
 .footer__form {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -283,6 +285,11 @@ body {
   font-size: var(--step--2);
 }
 
+.footer__form-email--err {
+  color: var(--error-color);
+  border: 1.7px solid var(--error-color);
+}
+
 .footer__form-submit-btn {
   margin-left: 1em;
   padding: 0.95rem 2rem 0.65rem;
@@ -296,6 +303,17 @@ body {
 
 .footer__form-submit-btn:hover {
   background-color: var(--bright-red-hover-state);
+}
+
+.footer__form-err-msg {
+  position: absolute;
+  bottom: -1.6rem;
+  left: 1.7rem;
+  font-size: var(--step--2);
+  font-weight: lighter;
+  font-style: italic;
+  color: var(--error-color);
+  text-overflow: clip;
 }
 
 .footer__nav {
