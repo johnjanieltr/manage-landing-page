@@ -112,34 +112,43 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/ReviewCard.css" />
-    <link rel="stylesheet" href="./assets/css/MainNav.css" />
     <title>Manage - Landing Page</title>
   </head>
   <body>
     <header class="header" id="header">
-      <div class="header__div" id="header-div">
-        <div class="header__icon-contain" id="header-icon-contain">
+      <div class="header__container" id="header-container">
+        <div class="header__logo-wrapper" id="header-logo-wrapper">
           <img
             src="./assets/icons/logo.svg"
             alt="Manage logo"
-            class="header__icon"
+            class="header__logo"
           />
         </div>
-        <span class="burger-btn" id="burger-btn">
-          <img
-            src="./assets/icons/icon-hamburger.svg"
-            alt="Burger button"
-            class="burger-btn__icon"
-            id="burger-btn-icon"
-          />
+        <!-- js insert here nav menu when desktop version -->
+        <span class="header__btn-wrapper" id="header-btn-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="18"
+            class="header__btn"
+          >
+            <g fill="#242D52" fill-rule="evenodd">
+              <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
+            </g>
+          </svg>
         </span>
-        <span class="btn-header-contain"
-          ><a href="#" class="btn btn--header">get started</a></span
+        <span class="btn-wrapper hidden"
+          ><a href="#" class="btn btn--header">Get Started</a></span
         >
       </div>
     </header>
-    <nav class="main-nav main-nav--mobile hidden" id="main-nav-mobile">
+    <!-- 
+      The main nav mobile version is rendered outside the header so that when it is active everything can be darkened except for it
+
+      in the desktop version from javascript the nav outside the header is removed and rendered inside the header
+
+    -->
+    <nav class="main-nav hidden" id="main-nav-mobile">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a href="#">Pricing</a></li>
         <li class="main-nav__item"><a href="#">Product</a></li>
@@ -149,61 +158,61 @@
       </ul>
     </nav>
     <main>
-      <div class="sections-wrapper">
-        <section class="sections">
+      <div class="sections-container">
+        <section class="section">
           <img
             src="./assets/images/illustration-intro.svg"
             alt="Illustration"
-            class="graphic-img"
+            class="section__illustration"
           />
         </section>
-        <section class="sections promoting-section">
-          <h1 class="sections__title section__title--h1">
+        <section class="section">
+          <h1 class="section__title section__title--h1">
             Bring everyone together to build better products.
           </h1>
-          <p class="sections__description">
+          <p class="section__description">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
-          <span><a href="#" class="btn">get started</a></span>
+          <span><a href="#" class="btn">Get Started</a></span>
         </section>
-        <section class="sections about-section">
-          <h2 class="sections__title">What’s different about Manage?</h2>
-          <p class="sections__description">
+        <section class="section">
+          <h2 class="section__title">What’s different about Manage?</h2>
+          <p class="section__description">
             Manage provides all the functionality your team needs, without the
             complexity. Our software is tailor-made for modern digital product
             teams.
           </p>
         </section>
-        <section class="sections more-info-section">
-          <div class="mi-item">
-            <div class="mi-item__header">
-              <span class="mi-item__number">01</span>
-              <h2 class="mi-item__title">Track company-wide progress</h2>
+        <section class="section">
+          <div class="sec-item">
+            <div class="sec-item__header">
+              <span class="sec-item__num">01</span>
+              <h2 class="sec-item__title">Track company-wide progress</h2>
             </div>
-            <p class="mi__description">
+            <p class="sec-item__description">
               See how your day-to-day tasks fit into the wider vision. Go from
               tracking progress at the milestone level all the way done to the
               smallest of details. Never lose sight of the bigger picture again.
             </p>
           </div>
-          <div class="mi-item">
-            <div class="mi-item__header">
-              <span class="mi-item__number">02</span>
-              <h2 class="mi-item__title">Advanced built-in reports</h2>
+          <div class="sec-item">
+            <div class="sec-item__header">
+              <span class="sec-item__num">02</span>
+              <h2 class="sec-item__title">Advanced built-in reports</h2>
             </div>
-            <p class="mi__description">
+            <p class="sec-item__description">
               Set internal delivery estimates and track progress toward company
               goals. Our customizable dashboard helps you build out the reports
               you need to keep key stakeholders informed.
             </p>
           </div>
-          <div class="mi-item">
-            <div class="mi-item__header">
-              <span class="mi-item__number">03</span>
-              <h2 class="mi-item__title">Everything you need in one place</h2>
+          <div class="sec-item">
+            <div class="sec-item__header">
+              <span class="sec-item__num">03</span>
+              <h2 class="sec-item__title">Everything you need in one place</h2>
             </div>
-            <p class="mi__description">
+            <p class="sec-item__description">
               Stop jumping from one service to another to communicate, store
               files, track tasks and share documents. Manage offers an
               all-in-one team productivity solution.
@@ -211,11 +220,10 @@
           </div>
         </section>
       </div>
-      <section class="sections reviews-section">
-        <h2 class="sections__title sections__title--center">
-          What they’ve said
-        </h2>
-        <div class="review-cards-wrapper">
+      <section class="reviews-section">
+        <h2 class="reviews-section__title">What they’ve said</h2>
+        <!--  -->
+        <div class="review-cards-container">
           <div class="review-card review-cards--is-active">
             <div class="review-card__img-container">
               <img
@@ -224,13 +232,14 @@
                 class="review-card__img"
               />
             </div>
-            <span class="review-card__name">anisha li</span>
+            <span class="review-card__name">Anisha Li</span>
             <p class="review-card__comment">
               “Manage has supercharged our team’s workflow. The ability to
               maintain visibility on larger milestones at all times keeps
               everyone motivated.”
             </p>
           </div>
+          <!--  -->
           <div class="review-card hidden">
             <div class="review-card__img-container">
               <img
@@ -239,7 +248,7 @@
                 class="review-card__img"
               />
             </div>
-            <span class="review-card__name">ali bravo</span>
+            <span class="review-card__name">Ali Bravo</span>
             <p class="review-card__comment">
               “We have been able to cancel so many other subscriptions since
               using Manage. There is no more cross-channel confusion and
@@ -254,7 +263,7 @@
                 class="review-card__img"
               />
             </div>
-            <span class="review-card__name">richard watts</span>
+            <span class="review-card__name">Richard Watts</span>
             <p class="review-card__comment">
               “Manage allows us to provide structure and process. It keeps us
               organized and focused. I can’t stop recommending them to everyone
@@ -269,7 +278,7 @@
                 class="review-card__img"
               />
             </div>
-            <span class="review-card__name">shanai gough</span>
+            <span class="review-card__name">Shanai Gough</span>
             <p class="review-card__comment">
               “Their software allows us to track, manage and collaborate on our
               projects from anywhere. It keeps the whole team in-sync without
@@ -286,23 +295,23 @@
           </ul>
         </nav>
         <span>
-          <a href="#" class="btn">get started</a>
+          <a href="#" class="btn">Get Started</a>
         </span>
       </section>
       <section class="last-section">
-        <div class="last-section__contain-wrapper">
+        <div class="last-section__container">
           <h2 class="last-section__title">
             Simplify how your team works today.
           </h2>
           <span>
-            <a href="#" class="btn btn--white">get started</a>
+            <a href="#" class="btn btn--white">Get Started</a>
           </span>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__contain-wrapper">
-        <div class="footer__form-wrapper">
+      <div class="footer__container">
+        <div class="footer__form-container">
           <form class="footer__form" id="newsletter-form" novalidate>
             <input
               type="email"
@@ -395,7 +404,7 @@
           <img
             src="./assets/icons/logo-white.svg"
             alt="Manage logo"
-            class="header__icon"
+            class="footer__logo-icon"
           />
         </div>
         <span class="footer__copyright"
@@ -403,7 +412,7 @@
         >
       </div>
     </footer>
-    <div class="darkened-screen hidden" id="darkened-screen"></div>
+    <div class="dark-layer hidden" id="dark-layer"></div>
     <div class="attribution">
       Challenge by
       <a

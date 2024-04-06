@@ -1,4 +1,5 @@
-import { changeMainMenu, toggleMainNavMobile } from "./MainNav.js";
+import { changeMainNav, toggleMainNavMobile } from "./MainNav.js";
+import newsLetterHandler from "./newsLetterHandler.js";
 import { changeReviewCard, reviewCardFunction } from "./ReviewCards.js";
 
 const $newsletterFormInput = document.getElementById("newsletter-form-input"),
@@ -6,7 +7,7 @@ const $newsletterFormInput = document.getElementById("newsletter-form-input"),
 
 let changeReviewCardsIsRunning;
 
-document.addEventListener("DOMContentLoaded", changeMainMenu);
+document.addEventListener("DOMContentLoaded", changeMainNav);
 
 window.addEventListener("load", () => {
   if (!window.matchMedia("(min-width: 576px)").matches) {
@@ -16,27 +17,20 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.matches("#burger-btn")) toggleMainNavMobile();
-  if (e.target.matches("#darkened-screen")) toggleMainNavMobile();
+  if (
+    e.target.matches("#header-btn-wrapper") ||
+    e.target.matches("#header-btn-wrapper *")
+  )
+    toggleMainNavMobile();
+  if (e.target.matches("#dark-layer")) toggleMainNavMobile();
   if (e.target.matches(".main-nav__item a")) toggleMainNavMobile();
+  return;
 });
 
 document.addEventListener("submit", (e) => {
   if (e.target.matches("#newsletter-form")) {
     e.preventDefault();
-    const REGEXP =
-      /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
-    let inputValue = $newsletterFormInput.value;
-
-    if (REGEXP.test(inputValue)) {
-      $newsletterFormInput.value = "";
-      $newsletterFormInput.classList.remove("footer__form-email--err");
-      $newsletterFormInput.blur();
-      $newsletterFormErrorMsg.classList.add("hidden");
-    } else {
-      $newsletterFormInput.classList.add("footer__form-email--err");
-      $newsletterFormErrorMsg.classList.remove("hidden");
-    }
+    newsLetterHandler();
   }
 });
 
@@ -52,7 +46,7 @@ document.addEventListener("keypress", (e) => {
 });
 
 window.addEventListener("resize", () => {
-  changeMainMenu();
+  changeMainNav();
 
   if (window.matchMedia("(min-width: 620px)").matches) {
     if (changeReviewCardsIsRunning) {
