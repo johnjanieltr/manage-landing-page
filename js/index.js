@@ -1,3 +1,4 @@
+import headerEffect from "./headerEffect.js";
 import { changeMainNav, toggleMainNavMobile } from "./MainNav.js";
 import newsLetterHandler from "./newsLetterHandler.js";
 import { changeReviewCard, reviewCardFunction } from "./ReviewCards.js";
@@ -7,7 +8,10 @@ const $newsletterFormInput = document.getElementById("newsletter-form-input"),
 
 let changeReviewCardsIsRunning;
 
-document.addEventListener("DOMContentLoaded", changeMainNav);
+document.addEventListener("DOMContentLoaded", () => {
+  changeMainNav();
+  headerEffect();
+});
 
 window.addEventListener("load", () => {
   if (!window.matchMedia("(min-width: 576px)").matches) {
@@ -44,6 +48,8 @@ document.addEventListener("keypress", (e) => {
     }
   }
 });
+
+document.addEventListener("scroll", headerEffect);
 
 window.addEventListener("resize", () => {
   changeMainNav();
