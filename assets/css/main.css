@@ -545,28 +545,13 @@ body {
 .btn {
   position: relative;
   display: inline-block;
-  padding: 0.5rem 1.7rem;
-  font-size: var(--step--2);
-  font-weight: 500;
-  color: #fff;
-  text-transform: capitalize;
+  padding: 0.55rem 1.7rem 0.45rem;
   background-color: var(--bright-red);
+  color: #fff;
+  font-weight: 500;
   border-radius: 1.7rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
-}
-
-.btn::after {
-  /* shadow for the btns */
-  content: "";
-  position: absolute;
-  top: 0.7rem;
-  left: 0.55rem;
-  z-index: -1;
-  width: 83%;
-  height: 1.5rem;
-  border-radius: inherit;
-  box-shadow: 0 10px 15px var(--bright-red-hover-state);
 }
 
 .btn:hover {
@@ -580,14 +565,38 @@ body {
   transition: color 0.2s ease;
 }
 
-.btn--white::after {
-  display: none;
-}
-
 .btn--white:hover {
   color: var(--bright-red-hover-state);
   background-color: #fff;
   opacity: 1;
+}
+
+.btn__link {
+  font-size: var(--step--2);
+  font-size: calc(var(--step--2) - 1px);
+  text-transform: capitalize;
+  border-radius: inherit;
+}
+
+.btn__shadow {
+  border: 1px solid red;
+  position: absolute;
+  top: 0.55rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 85%;
+  height: 1.5rem;
+  margin: auto;
+  border-radius: inherit;
+  box-shadow: 0 10px 15px var(--bright-red-hover-state);
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.btn__shadow-is-hidden {
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .tablet-pattern-1 {
@@ -871,7 +880,7 @@ body {
 }
 
 @media (min-width: 830px) {
-  .btn-wrapper {
+  .btn--header {
     display: block;
   }
 
