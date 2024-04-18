@@ -1,4 +1,4 @@
-import headerEffect from "./headerEffect.js";
+import headerBackgroundTransparent from "./headerBackgroundTransparent.js";
 import { changeMainNav, toggleMainNavMobile } from "./MainNav.js";
 import newsLetterHandler from "./newsLetterHandler.js";
 import { changeReviewCard, reviewCardFunction } from "./ReviewCards.js";
@@ -10,7 +10,7 @@ let changeReviewCardsIsRunning;
 
 document.addEventListener("DOMContentLoaded", () => {
   changeMainNav();
-  headerEffect();
+  headerBackgroundTransparent();
 });
 
 window.addEventListener("load", () => {
@@ -49,7 +49,7 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
-document.addEventListener("scroll", headerEffect);
+document.addEventListener("scroll", headerBackgroundTransparent);
 
 window.addEventListener("resize", () => {
   changeMainNav();

@@ -66,6 +66,7 @@ li {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
@@ -110,6 +111,7 @@ svg {
 
 body {
   min-height: 100vh;
+  padding-top: clamp(6.8rem, 4.6621rem + 5.5172vi, 8.8rem);
   font-size: 100%;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -122,11 +124,11 @@ body {
 
 /* ******* HEADER ******* */
 .header {
-  position: sticky;
-  top: -0.5rem;
+  position: fixed;
+  top: 0;
   z-index: 900;
   width: 100%;
-  padding: calc(2.5rem + 0.5rem) 1.5rem 2.5rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   background-color: var(--main-bg-color);
   transition: background-color 0.2s ease;
 }
@@ -539,7 +541,7 @@ body {
   opacity: 0.8;
 }
 
-/* ******* BTNS ******* */
+/* ******* OTHERS ******* */
 .btn {
   position: relative;
   display: inline-block;
@@ -567,8 +569,8 @@ body {
   box-shadow: 0 10px 15px var(--bright-red-hover-state);
 }
 
-.btn-header-contain {
-  display: none;
+.btn:hover {
+  background-color: var(--bright-red-hover-state);
 }
 
 .btn--white {
@@ -582,17 +584,12 @@ body {
   display: none;
 }
 
-.btn:hover {
-  background-color: var(--bright-red-hover-state);
-}
-
 .btn--white:hover {
   color: var(--bright-red-hover-state);
   background-color: #fff;
   opacity: 1;
 }
 
-/* ******* OTHERS ******* */
 .tablet-pattern-1 {
   position: absolute;
   top: clamp(-20.7rem, -9.5182rem + -14.9091vi, -12.5rem);
@@ -857,7 +854,7 @@ body {
   .main-nav__item {
     padding: 0;
     margin-left: 1.3rem;
-    font-size: var(--step--1);
+    font-size: var(--step--2);
     font-weight: 500;
   }
 
@@ -879,7 +876,7 @@ body {
   }
 
   .main-nav {
-    width: 40%;
+    width: 45%;
   }
 
   .main-nav__list {
@@ -896,6 +893,10 @@ body {
 }
 
 @media (min-width: 992px) {
+  .main-nav {
+    width: 40%;
+  }
+
   /* footer changes */
   .footer {
     padding-left: 2.5rem;

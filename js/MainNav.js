@@ -5,10 +5,22 @@ const $darkLayer = document.getElementById("dark-layer");
 export const changeMainNav = () => {
   if (window.matchMedia("(min-width: 670px)").matches) {
     if (mainNavMobileIsActive === true) {
-      let $mainNavMobile = document.getElementById("main-nav-mobile");
-
       // remove main menu mobile version
-      document.documentElement.lastChild.removeChild($mainNavMobile);
+      document.body.removeChild(document.getElementById("main-nav-mobile"));
+      // resetting the default icon
+      document.getElementById("header-btn-wrapper").innerHTML = `
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="18"
+          class="header__btn"
+        >
+          <g fill="#242D52" fill-rule="evenodd">
+            <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
+          </g>
+        </svg>
+      `;
+
       // add main menu desktop version
       document
         .getElementById("header-logo-wrapper")
@@ -19,13 +31,10 @@ export const changeMainNav = () => {
     }
   } else {
     if (mainNavMobileIsActive === false) {
-      let $mainNavDesktop = document.getElementById("main-nav-desktop");
-
       // remove main menu desktop version
-      if ($mainNavDesktop)
-        document
-          .getElementById("header-container")
-          .removeChild($mainNavDesktop);
+      document
+        .getElementById("header-container")
+        .removeChild(document.getElementById("main-nav-desktop"));
       // print main menu mobile version
       document
         .getElementById("header")
@@ -43,7 +52,6 @@ export const toggleMainNavMobile = () => {
     // open main nav mobile
     $mainNav.classList.remove("hidden");
     $darkLayer.classList.remove("hidden");
-
     setTimeout(() => {
       $mainNav.classList.add("main-nav--is-active");
       $darkLayer.classList.add("dark-layer--is-active");
@@ -98,12 +106,10 @@ export const mainNavRender = (device) => {
     </ul>
   `;
   if (device === "mobile") {
-    $nav.classList.add("main-nav--mobile");
     $nav.classList.add("hidden");
     $nav.setAttribute("id", "main-nav-mobile");
   }
   if (device === "desktop") {
-    $nav.classList.add("main-nav--desktop");
     $nav.setAttribute("id", "main-nav-desktop");
   }
   return $nav;
