@@ -1,8 +1,7 @@
 {
   "name": "manage-landing-page",
-  "version": "1.0.0",
-  "description": "Manage landing page challenge solution",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": "true",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +9,6 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
-  "author": "johnjanieltr <troyajohn17@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "gh-pages": "^6.1.1",
     "vite": "^5.1.5"
