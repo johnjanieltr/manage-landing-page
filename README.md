@@ -1,35 +1,33 @@
-# Frontend Mentor - Manage landing page solution
+# Frontend Mentor - Manage landing page solución
 
-This is my solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5)
+Esta es mi solución para el desafió [Manage landing page de Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5)
 
-![Design preview for the Manage landing page coding challenge](./assets/images/preview.jpg)
+![Vista previa para el desafió de código Manage landing page](./assets/images/preview.jpg)
 
-## Overview
+## Descripción del desafió
 
-### The challenge
+Los usuarios deberían poder:
 
-Users should be able to:
+- Ver el diseño óptimo para el sitio según el tamaño de pantalla de su dispositivo
+- Ver estados de desplazamiento para todos los elementos interactivos en la página
+- Ver todos los testimonios en un control deslizante horizontal
+- Recibir un mensaje de error cuando se envíe el "formulario" de suscripción al boletín si:
+  - El campo `entrada` está vacío
+  - La dirección de correo electrónico no tiene el formato correcto.
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See all testimonials in a horizontal slider
-- Receive an error message when the newsletter sign up `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
-
-### Links
-
-- Solution URL: [https://github.com/johnjanieltr/manage-landing-page](https://github.com/johnjanieltr/manage-landing-page/tree/main)
-- Live Site URL: [https://johnjanieltr.github.io/manage-landing-page](https://johnjanieltr.github.io/manage-landing-page)
-
-### Built with
+## Tecnologías y enfoques
 
 - HTML5
 - CSS3
-- Mobile-first workflow
-- BEM methodology
-- Vanilla JavaScript
+- JavaScript
+- Diseño responsive mobile-first
+- Metodología BEM
 
-### Resources used
+### Recursos usados
 
-- [Utopia](https://utopia.fyi/) - Use the utopia page for responsive texts and responsive images
+- [Utopia](https://utopia.fyi) - Uso de la herramienta de utopía para mejorar diseño responsive
+
+## Enlaces
+
+- Ver aplicación desplegada:: [https://johnjanieltr.github.io/manage-landing-page](https://johnjanieltr.github.io/manage-landing-page)
+- Ver mi pagina: [https://johnjanieltr.github.io](https://johnjanieltr.github.io)
